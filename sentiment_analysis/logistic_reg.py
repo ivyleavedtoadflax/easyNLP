@@ -173,4 +173,4 @@ threshold = 0.5
 for word, index in word_index_map.items():
         weight = model.coef_[0][index]
         if weight > threshold or weight < -threshold:
-            print(word, weight)
+            print(word,  weight)
