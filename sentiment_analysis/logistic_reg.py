@@ -165,4 +165,12 @@ model = LogisticRegression()
 model.fit(Xtrain,Ytrain)
 print(model.score(Xtest, Ytest))
 
+# Model classification rates are not great, so look at the weights related
+# to each term which is over or under a treshold.
 
+threshold = 0.5
+
+for word, index in word_index_map.items():
+        weight = model.coef_[0][index]
+        if weight > threshold or weight < -threshold:
+            print(word, weight)
