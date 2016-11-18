@@ -4,7 +4,7 @@ import matplotlib.pyplot as plot
 from nltk.stem import WordNetLemmatizer
 from sklearn.decomposition import TruncatedSVD
 
-wornet_lemmatozer = WordNetLemmatizer()
+wornet_lemmatizer = WordNetLemmatizer()
 
 titles = [line.rstrip() for line in open('all_book_titles.txt')]
 stopwords = set(w.rstrip() for w in open('stopwords.txt'))
